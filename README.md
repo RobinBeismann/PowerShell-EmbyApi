@@ -6,7 +6,7 @@ Those are just some basic functions, however I didn't implent much error handlin
 # Examples:
 
 - Disable all Users without Password:
-Get-EmbyUsers | Where-Object { $_.HasPassword -eq "False" } | ForEach-Object { Set-EmbyUserPolicy -username $_.Name -attribute "IsDisabled" -value "True" }
+> Get-EmbyUsers | Where-Object { $_.HasPassword -eq "False" } | ForEach-Object { Set-EmbyUserPolicy -username $_.Name -attribute "IsDisabled" -value "True" }
 
 - Create a user
 > Create-EmbyUser -username "test" | Out-Null
